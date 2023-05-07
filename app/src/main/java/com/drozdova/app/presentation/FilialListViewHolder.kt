@@ -1,8 +1,10 @@
-package com.drozdova.app
+package com.drozdova.app.presentation
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.drozdova.app.databinding.FilialItemBinding
+import com.drozdova.app.presentation.model.CurrencyModel
+import com.drozdova.app.presentation.model.FilialModel
 
 class FilialListViewHolder(
     private val view: FilialItemBinding

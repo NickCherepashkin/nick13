@@ -1,9 +1,10 @@
-package com.drozdova.app
+package com.drozdova.app.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.drozdova.app.databinding.CurrencyItemBinding
+import com.drozdova.app.presentation.model.CurrencyModel
 
 class CurrencyListAdapter : Adapter<CurrencyListViewHolder>() {
     private var _binding: CurrencyItemBinding? = null
