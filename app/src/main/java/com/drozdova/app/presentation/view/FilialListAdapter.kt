@@ -1,9 +1,10 @@
-package com.drozdova.app
+package com.drozdova.app.presentation.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.drozdova.app.databinding.FilialItemBinding
+import com.drozdova.app.presentation.model.FilialModel
 
 class FilialListAdapter : Adapter<FilialListViewHolder>() {
     private var _binding: FilialItemBinding? = null

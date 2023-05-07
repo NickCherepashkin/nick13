@@ -1,7 +1,9 @@
-package com.drozdova.app
+package com.drozdova.app.presentation.view
 
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.drozdova.app.R
 import com.drozdova.app.databinding.CurrencyItemBinding
+import com.drozdova.app.presentation.model.CurrencyModel
 
 class CurrencyListViewHolder(
     private val view: CurrencyItemBinding

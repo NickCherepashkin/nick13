@@ -1,4 +1,4 @@
-package com.drozdova.app
+package com.drozdova.app.presentation.model
 
 data class CurrencyModel(
     val title: String,
