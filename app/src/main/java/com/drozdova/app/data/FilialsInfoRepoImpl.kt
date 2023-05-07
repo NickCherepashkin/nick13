@@ -3,8 +3,9 @@ package com.drozdova.app.data
 import com.drozdova.app.domain.repository.FilialsInfoRepo
 import com.drozdova.app.presentation.model.CurrencyModel
 import com.drozdova.app.presentation.model.FilialModel
+import javax.inject.Inject
 
-class FilialsInfoRepoImpl: FilialsInfoRepo {
+class FilialsInfoRepoImpl @Inject constructor(): FilialsInfoRepo {
     override fun getDataList(): List<FilialModel> {
         return listOf(
             FilialModel(

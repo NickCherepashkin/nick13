@@ -5,7 +5,9 @@ import android.os.Bundle
 import com.drozdova.app.R
 import com.drozdova.app.databinding.ActivityMainBinding
 import com.drozdova.app.presentation.view.MainFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
