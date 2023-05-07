@@ -1,20 +1,20 @@
-package com.drozdova.app.presentation
+package com.drozdova.app.presentation.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.drozdova.app.data.DataRepoImpl
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.drozdova.app.databinding.FragmentMainBinding
-import com.drozdova.app.domain.interactor.DataInteractor
+import com.drozdova.app.presentation.viewmodel.FilialsInfoViewModel
 
 class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var adapter: FilialListAdapter
-    private lateinit var interactor: DataInteractor
+    private val viewModel: FilialsInfoViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,12 +27,13 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        interactor = DataInteractor(DataRepoImpl())
-
         adapter = FilialListAdapter()
         binding.rvFilialList.adapter = adapter
-        val list = interactor.getDataList()
-        adapter.submit(list)
+
+        viewModel.showDataList()
+        viewModel.dataList.observe(viewLifecycleOwner) { list ->
+            adapter.submit(list)
+        }
     }
 
     override fun onDestroy() {

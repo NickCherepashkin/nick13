@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.drozdova.app.R
 import com.drozdova.app.databinding.ActivityMainBinding
-import com.drozdova.app.presentation.MainFragment
+import com.drozdova.app.presentation.view.MainFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

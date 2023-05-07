@@ -1,4 +1,4 @@
-package com.drozdova.app.presentation
+package com.drozdova.app.presentation.view
 
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.drozdova.app.R

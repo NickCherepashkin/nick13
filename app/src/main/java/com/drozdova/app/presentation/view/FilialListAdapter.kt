@@ -1,4 +1,4 @@
-package com.drozdova.app.presentation
+package com.drozdova.app.presentation.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

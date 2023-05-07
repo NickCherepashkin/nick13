@@ -1,4 +1,4 @@
-package com.drozdova.app.presentation
+package com.drozdova.app.presentation.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,8 +12,8 @@ class CurrencyListAdapter : Adapter<CurrencyListViewHolder>() {
 
     private var listOfCurrency = listOf<CurrencyModel>()
 
-    fun submit(listOfCurrency: MutableList<CurrencyModel>) {
-        this.listOfCurrency = listOfCurrency.toList()
+    fun submit(listOfCurrency: List<CurrencyModel>) {
+        this.listOfCurrency = listOfCurrency
         notifyDataSetChanged()
     }
 
