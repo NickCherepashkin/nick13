@@ -11,8 +11,10 @@ class CurrencyListAdapter : Adapter<CurrencyListViewHolder>() {
     private val binding get() = _binding!!
 
     private var listOfCurrency = listOf<CurrencyModel>()
+    private lateinit var currencyTitles: Array<String>
 
-    fun submit(listOfCurrency: List<CurrencyModel>) {
+    fun submit(currencyTitles: Array<String>, listOfCurrency: List<CurrencyModel>) {
+        this.currencyTitles = currencyTitles
         this.listOfCurrency = listOfCurrency
         notifyDataSetChanged()
     }
@@ -23,7 +25,7 @@ class CurrencyListAdapter : Adapter<CurrencyListViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: CurrencyListViewHolder, position: Int) {
-        holder.bind(listOfCurrency[position])
+        holder.bind(currencyTitles[position],listOfCurrency[position], position)
     }
 
     override fun getItemCount(): Int {

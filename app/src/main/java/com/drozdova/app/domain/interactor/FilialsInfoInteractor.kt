@@ -7,7 +7,7 @@ import javax.inject.Inject
 class FilialsInfoInteractor @Inject constructor(
     private val dataListRepo: FilialsInfoRepo
 ) {
-    fun getDataList(): List<FilialModel> {
-        return dataListRepo.getDataList()
+    suspend fun getDataList(city: String): List<FilialModel> {
+        return dataListRepo.getDataList(city)
     }
 }
