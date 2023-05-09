@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_city">Выберите город:</string>
+    <string name="buying">Покупка</string>
+    <string name="selling">Продажа</string>
+    <string name="exchange_currency">Обмен валют</string>
+    <string name="check_connection_message">Check your connection</string>
+
+    <string-array name="cities">
+        <item>Брест</item>
+        <item>Витебск</item>
+        <item>Гомель</item>
+        <item>Гродно</item>
+        <item>Минск</item>
+        <item>Могилев</item>
+    </string-array>
+
+    <string-array name="currency_title">
+        <item>USD</item>
+        <item>EURO</item>
+        <item>RUB</item>
+    </string-array>
+</resources>
